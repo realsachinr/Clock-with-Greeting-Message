@@ -12,23 +12,27 @@ function clock() {
   var setTime = setTimeout(function () {
     clock();
   }, 1000);
+}
+clock();
 
-  var msg;
-  if (h < 12) {
-    msg = "Good Morning";
-  } else if (h >= 12 && h < 17) {
-    msg = "Good Afternoon";
-  } else if (h >= 17 && h < 20) {
-    msg = "Good Evening";
+function showGreeting() {
+  // Get the current time
+  var currentTime = new Date();
+  var currentHour = currentTime.getHours();
+
+  // Define the greeting message based on the time
+
+  var greetingMessage;
+  if (currentHour < 12) {
+    greetingMessage = "Good Morning";
+  } else if (currentHour >= 12 && currentHour < 17) {
+    greetingMessage = "Good Afternoon";
+  } else if (currentHour >= 17 && currentHour < 20) {
+    greetingMessage = "Good Evening";
   } else {
-    msg = "Good Night";
+    greetingMessage = "Good Night";
   }
 
-  button.addEventListener("click", function () {
-    var alerts = alert(msg);
-    clearTimeout(setTime);
-    clock();
-  });
+  // Display the greeting message in an alert box
+  alert(greetingMessage);
 }
-
-clock();
