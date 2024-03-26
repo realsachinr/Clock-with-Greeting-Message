@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#btn {
+  padding: 10px;
+}
+#btn:hover {
+    transform-origin: left;
+    background-color: chocolate;
+    transition: all 1s ease;
+}
+body {
+  background: linear-gradient(to right, rgb(92, 92, 255), rgb(255, 171, 171));
+  font-family: "Times New Roman", Times, serif;
+  width: 100vw;
+  height: 100vh;
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper {
+  padding: 20px;
+  display: flex;
+  background-color: rgb(176, 204, 255);
+  flex-direction: column;
+  border: 1px solid black;
+  box-shadow: 2px 2px 50px rgb(176, 255, 239);
+  justify-content: center;
+  align-items: center;
+}
